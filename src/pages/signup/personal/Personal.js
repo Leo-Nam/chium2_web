@@ -1,11 +1,12 @@
 import React, { useRef, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+//import { Link, useLocation } from 'react-router-dom';
 import axios from '../../../api/axios';
 import './personal.scss';
 
 export default function Personal() {
 
-    const location = useLocation();
+    //const location = useLocation();
 
     const errRef = useRef();
 
@@ -102,7 +103,7 @@ export default function Personal() {
             errRef.current.focus();
 		})
     }
-	
+
 	return (
 		<div className="member_type_body">
 			<div className="body_row_1">

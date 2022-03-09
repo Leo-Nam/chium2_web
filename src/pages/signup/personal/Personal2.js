@@ -1,7 +1,5 @@
-import { NoEncryption } from '@material-ui/icons';
 import React, { useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { validator } from 'validator';
 import axios from '../../../api/axios';
 import Axios from 'axios'
 import './personal2.scss';
@@ -13,10 +11,10 @@ export default function Personal2() {
     const errRef = useRef();
 
     const [userIdValid, setUserIdValid] = useState(false);
-    const [pwd1Valid, setPwd1Valid] = useState(false);
-    const [pwdValid, setPwdValid] = useState(false);
-    const [pwd2InputEnabled, setPwd2InputEnabled] = useState(false);
-    const [userIdEnabled, setUserIdEnabled] = useState(false);
+    //const [pwd1Valid, setPwd1Valid] = useState(false);
+    //const [pwdValid, setPwdValid] = useState(false);
+    //const [pwd2InputEnabled, setPwd2InputEnabled] = useState(false);
+    //const [userIdEnabled, setUserIdEnabled] = useState(false);
     const [userIdValidMessage, setUserIdValidMessage] = useState('');
     const [message, setMessage] = useState('');
     const [messageEmailValid, setMessageEmailValid] = useState('');
@@ -88,8 +86,8 @@ export default function Personal2() {
 		}
 		if (name === "pwd1") {
 			if (value.length >= 8 && value.length <= 16) {
-				setPwd1Valid(true)
-				setPwd2InputEnabled(true)
+				//setPwd1Valid(true)
+				//setPwd2InputEnabled(true)
 				setMessage('비밀번호가 유효합니다.')
 				changeMessageStyle("display", "flex")
 				if (value === user.pwd2) {
@@ -99,11 +97,11 @@ export default function Personal2() {
 				setMessage('비밀번호는 8글자 이상 16글자 이하이어야 합니다.')
 				changeMessageStyle("display", "flex")
 			}
-			setPwd1Valid(true)
-			setPwd2InputEnabled(true)
+			//setPwd1Valid(true)
+			//setPwd2InputEnabled(true)
 		}
 		if (name === "pwd2" && value.length >= 8 && value.length <= 16) {
-			setPwdValid(true);
+			//setPwdValid(true);
 			setMessage('비밀번호가 일치하지 않습니다.')
 			if (value === user.pwd1) {
 				setMessage('비밀번호가 일치합니다.')
@@ -148,11 +146,11 @@ export default function Personal2() {
 			console.log("response >>> ", response["rtn_val"])
 			const status = response["rtn_val"]
 			if (status === 0) {
-				setUserIdEnabled(true)
+				//setUserIdEnabled(true)
 				setUserIdValidMessage("유효한 사용자 아이디입니다.")
 				return response
 			} else {
-				setUserIdEnabled(false)
+				//setUserIdEnabled(false)
 				setUserIdValidMessage("중복된 사용자 아이디입니다.")
 			}
 		})
