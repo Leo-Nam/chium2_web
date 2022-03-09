@@ -1,0 +1,151 @@
+.member_type_body {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+}
+
+.body_row_1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+}
+
+.selection_container {
+	width: 1280px;
+	height: 100%;
+}
+
+.selection_items_container {
+	flex: 3;
+	display: flex;
+	width: 100%;
+	height: 80%;
+	justify-content: space-between;
+}
+
+.selection_item {
+	width: 400px;
+	height: 100%;
+    display: inline-block;
+}
+
+.selection_item_top {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.selection_radio {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	background-color: #0FB291;
+	cursor: pointer;
+}
+
+.item_name {
+	font-size: 32px;
+	font-weight: 600;
+	margin-top: 50px;
+}
+
+.item_desc {
+	font-size: 16px;
+	font-weight: 400;
+	color: #838383;
+	margin-top: 10px;
+}
+
+.selection_item_bottom {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.selection_item_circle {
+	width: 400px;
+	height: 400px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50% 50%;
+	background-color: #D1EBE5;
+}
+
+.card {
+	top: 4px;
+	position: relative;
+	display: inline-block;
+}
+
+.card .type_1_on {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+.card:hover .type_1_on {
+	display: inline;
+}
+
+.card .type_2_on {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+.card:hover .type_2_on {
+	display: inline;
+}
+
+.card .type_3_on {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+
+.card:hover .type_3_on {
+	display: inline;
+}
+
+.bottom_notice_container {
+	flex: 3;
+	display: flex;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.bottom_notice_txt {
+	font-size: 16px;
+	font-weight: 400;
+	color: #838383;
+	display: flex;
+	align-items: center;
+}
+
+.bottom_prev {
+	font-size: 16px;
+	font-weight: 400;
+	color: #838383;
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+}
